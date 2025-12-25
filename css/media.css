@@ -1,3 +1,4 @@
+
 /* Adaptive Iphone SE/8 */
 @media (max-height: 700px) {
     .items{
@@ -32,4 +33,12 @@
         left: 15px;
     }
     
+}
+@media (max-height: 900px) {
+    .best::after{
+        left: 180px;
+    }
+    .best::before{
+        left: 179px;
+    }
 }
