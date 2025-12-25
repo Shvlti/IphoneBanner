@@ -1,8 +1,9 @@
-
+/* Fetch i18n */
 async function loadTranslations(lang){
     const response = await fetch(`../i18n/${lang}.json`);
     return response.json();
 }
+/* taking URL & comparing languages, default - en */
 function resolveLanguage(){
     const params = new URLSearchParams(window.location.search);
     const langFromQuery = params.get('lang');
@@ -15,6 +16,7 @@ function resolveLanguage(){
 
     return 'en';
 }
+/* substitution of translation */
 function applyTranslation(dict){
     const elements = document.querySelectorAll('[data-i18n]')
 
@@ -38,6 +40,7 @@ function applyTranslation(dict){
         el.innerHTML = translation;
     });
 }
+/*  adding a translation to a pseudo-element */
 function applyPreudoTranslation(dict){
     document.querySelectorAll('[data-i18n').forEach(el => {
         const key = el.dataset.i18n;
@@ -58,23 +61,21 @@ document.addEventListener("DOMContentLoaded", async ()=>{
     applyPreudoTranslation(dict);
     
     const offers = document.querySelectorAll('.offer');
-let selectedPlan = document.querySelector('.offer.active')?.dataset.plan;
-
-offers.forEach(offer => {
-  offer.addEventListener('click', () => {
+    let selectedPlan = document.querySelector('.offer.active')?.dataset.plan;
+    /* selecting the link to go to & the active button */
+    offers.forEach(offer => {
+    offer.addEventListener('click', () => {
     
     offers.forEach(o => o.classList.remove('active'));
 
-    
     offer.classList.add('active');
 
-    
     selectedPlan = offer.dataset.plan;
-  });
-});
-const continueBtn = document.querySelector('.continue');
+    });
+    });
+    const continueBtn = document.querySelector('.continue');
 
-continueBtn.addEventListener('click', () => {
+    continueBtn.addEventListener('click', () => {
   if (selectedPlan === 'apple') {
     window.location.href = 'https://www.apple.com/';
   } else if (selectedPlan === 'google') {

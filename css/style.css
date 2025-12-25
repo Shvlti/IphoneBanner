@@ -1,9 +1,10 @@
+/* Fonts */
 :root {
     --font-stack: 
                 -apple-system,           /* SF Pro на macOS */
                 BlinkMacSystemFont,      /* SF Pro на Chrome/macOS */
                 'Segoe UI',              /* Windows */
-                'Inter',                 /* Наш запасной веб-шрифт */
+                'Inter',                 /* Запасной веб-шрифт */
                 Roboto,                  /* Android/Google */
                 Oxygen-Sans,             /* Linux KDE */
                 Ubuntu,                  /* Linux Ubuntu */
@@ -11,6 +12,7 @@
                 'Helvetica Neue',        /* Старый macOS */
                 sans-serif;              /* Универсальный fallback */
 }
+/* Сommon styles */
 *, ::after, ::before{
     box-sizing: border-box;
 }
@@ -37,12 +39,14 @@ header, main, footer {
     z-index: 2;
     padding: 0 24px;
 }
+/* Bar styles & header & content & footer & app */
 .status-bar{
     height: 48px;
 }
 .home-bar{
     height: 26px;
 }
+
 .header{
     flex-shrink: 0;
 }
@@ -74,6 +78,25 @@ header, main, footer {
     flex-direction: column;
     animation: fade .5s ease-out;
 }
+/* Button close */
+.close{
+    width: 27px;
+    height: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 65px;
+    left: 16px;
+    cursor: pointer;
+}
+.img-close{
+    width: 27px;
+    height: 27px;
+}
+/* Animation */
 @keyframes fade{
     from {
         opacity: 0;
@@ -84,6 +107,11 @@ header, main, footer {
         transform: translateY(0);
     }
 }
+@keyframes pop{
+    from {transform: scale(.9);}
+    to {transform: scale(1);}
+}
+
 .title{
     text-align: center;
     font-size: 42px;
@@ -91,6 +119,7 @@ header, main, footer {
     margin-bottom: 24px;
     font-weight: 880;
 }
+/* Items styles */
 .items{
     display: flex;
     justify-content: center;
@@ -127,6 +156,7 @@ header, main, footer {
     line-height: 100%;
     font-weight: 400;
 }
+/* Buttons styles */
 .btn{
     height: 56px;
     cursor: pointer;
@@ -182,12 +212,10 @@ header, main, footer {
 .btn.offer.active>.gradient>.line, .btn.offer.active>.gradient>.circle{
     display: none   ;
 }
-
 .best {
     position: relative;
     color: transparent
 }
-
 .best::before {
     content: '';
     position: absolute;
@@ -196,8 +224,6 @@ header, main, footer {
     width: 120px; 
     height: 20px; 
     border-radius: 100px;
-    
-    
     background: linear-gradient(to left, 
         rgba(0, 181, 255, 1), 
         rgba(99, 42, 247, 1), 
@@ -205,7 +231,6 @@ header, main, footer {
     );
     z-index: -1;
 }
-
 .best::after {
     content: var(--best-text);
     position: absolute;
@@ -236,38 +261,11 @@ header, main, footer {
     margin-top: 8px;
     animation: pop .3s ease-out;
 }
-
-@keyframes pop{
-    from {transform: scale(.9);}
-    to {transform: scale(1);}
-}
-.ftr-link{
-    opacity: 0.3;
-    font-weight: 200;
-    font-size: 13px;
-    line-height: 18px;
-}
-.close{
-    width: 27px;
-    height: 27px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: none;
-    border: none;
-    position: absolute;
-    top: 65px;
-    left: 16px;
-    cursor: pointer;
-}
-.img-close{
-    width: 27px;
-    height: 27px;
-}
 .btn.offer.active{
     background-color: rgba(255, 255, 255, 0.3024);
     border: 1px solid #ffffff;
 }
+/* Custom border */
 .gradient{
     position: relative;
 }
@@ -283,4 +281,13 @@ header, main, footer {
     right: -26px;
     bottom: 1px;
 }
+/* Footer */
+.ftr-link{
+    opacity: 0.3;
+    font-weight: 200;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+
 
