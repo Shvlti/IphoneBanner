@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+    <div class="app">
+        <div class="status-bar"></div>
+        <button class="close" aria-label="Close">
+                <img class="img-close" src="/assets/image/icons8-крестик-100 (1).png" alt="close">
+        </button>
+        <header class="header">  
+        </header>
+        <main class="content">
+            <h1 data-i18n="Get Unlimited <br>Access" class="title"></h1>
+            <div class="items">
+                <div class="item item-bg-1">
+                    <div data-i18n="Unlimited Art <br>Creation" class="item-text"></div>
+                </div>
+                <div class="item item-bg-2">
+                    <div data-i18n="Exclusive <br>Styles" class="item-text"></div>
+                </div>
+                <div class="item item-bg-3">
+                    <div data-i18n="Magic Avatars <br>With 20% Off" class="item-text"></div>
+                </div>
+            </div>
+            <button class="btn offer active" data-plan="apple">
+                
+                <div class="offer-name">
+                    <div class="offer-name_title" data-i18n="YEARLY ACCESS"></div>
+                    <span data-i18n="Just {{price}} per year"  data-i18n-params='{"price":"$39.99"}'></span>
+                    
+                </div>
+                <div class="offer-price">
+                    <div data-i18n="{{price}} <br>per week" data-i18n-params='{"price":"$0.48"}'></div>
+                </div>
+                <div class="gradient">
+                    <img class="line" src="/assets/image/Path (1).svg" alt="line">
+                    <img class="circle" src="/assets/image/Path.svg" alt="circle">
+                </div>
+                <div data-i18n="BEST OFFER" class="best"></div>
+                
+            </button>
+            <button class="btn offer" data-plan="google">
+                <div class="offer-name">
+                    <div data-i18n='WEEKLY ACCESS' class="offer-name_title"></div>
+                </div>
+                <div class="offer-price">
+                    <div data-i18n="{{price}} <br>per week"  data-i18n-params='{"price":"$6.99"}'></div>
+                    
+                </div>
+            </button>
+            <button data-i18n="Continue" class="btn continue"></button>
+        </main>
+        <footer class="footer">
+            <div class="ftr-link" ><a data-i18n="Terms of Use" href="#"></a></div>
+            <div class="ftr-link"><a data-i18n="Privacy Policy" href="#"></a></div>
+            <div class="ftr-link"><a data-i18n="Restore" href="#"></a></div>
+        </footer>
+        <div class="home-bar"></div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+</html>

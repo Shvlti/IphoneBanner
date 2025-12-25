@@ -1,0 +1,34 @@
+@media (max-height: 700px) {
+    .items{
+        gap: 4px;
+        margin-bottom: 24px;
+    }
+    .item{
+        width: 106px;
+        height: 139px;
+    }
+    .home-bar{
+        display: none;
+    }
+    .status-bar{
+        height: 21px;
+    }
+    .app{
+        background-position: center -34px;
+    }
+    .btn.continue{
+        margin-bottom: 28px;
+        margin-top: 0;
+    }
+    .best::after{
+        left: 159px;
+    }
+    .best::before{
+        left: 158px;
+    }
+    .close{
+        top: 35px;
+        left: 15px;
+    }
+    
+}
